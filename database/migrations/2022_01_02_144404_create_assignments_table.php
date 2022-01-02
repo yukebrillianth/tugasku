@@ -29,6 +29,9 @@ class CreateAssignmentsTable extends Migration
             $table->foreignId('grade_id')
                 ->constrained('grades')
                 ->onDelete('cascade');
+            $table->foreignId('teacher_id')
+                ->constrained('teachers')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
